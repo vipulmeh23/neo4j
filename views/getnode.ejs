@@ -1,174 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<style type="text/css" media="screen">
-    canvas, img { display:block; margin:1em auto; border:1px solid black; }
-    #myCanvas { background-image:url(back.png); background-size: 610px 323px; }
-</style>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style type="text/css" media="screen">
+        canvas, img {
+            display: block;
+            margin: 1em auto;
+            border: 1px solid black;
+        }
+
+        #myCanvas {
+            background-image: url(back.png);
+            background-size: 610px 323px;
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-    <div class="jumbotron" style="overflow: auto;">
+    <div class="container">
+        <div class="jumbotron" style="overflow: auto;">
 
-        <div class="form-group">
+            <div class="form-group">
 
-            <div class="col-xs-6">
-                <label for="from">You Are At Room Number ?</label>
-                <select class="form-control" class="col-xs-4" id="from">
-                    <option value="2967">2967</option>
-                    <option value="2580">2580</option>
-                    <option value="2575">2575</option>
-                    <option value="2570">2570</option>
-                    <option value="2573">2573</option>
-                    <option value="2571">2571</option>
-                    <option value="2569">2569</option>
-                    <option value="2512">2512</option>
-                    <option value="2503">2503</option>
-                    <option value="2507">2507</option>
-                    <option value="2500">2500</option>
-                    <option value="2508">2508</option>
-                    <option value="2604">2604</option>
-                    <option value="2600">2600</option>
-                    <option value="2590">2590</option>
-                    <option value="2588">2588</option>
-                    <option value="2688">2688</option>
-                    <option value="2684">2684</option>
-                    <option value="2690">2690</option>
-                    <option value="2680">2680</option>
-                    <option value="2968">2968</option>
-                    <option value="2669">2669</option>
-                    <option value="2651">2651</option>
-                    <option value="2650">2650</option>
-                    <option value="2635">2635</option>
-                    <option value="2619">2619</option>
-                    <option value="2608">2608</option>
-                    <option value="2455">2455</option>
-                </select>
+                <div class="col-xs-6">
+                    <label for="from">You Are At Room Number ?</label>
+                    <select class="form-control" class="col-xs-4" id="from">
+                        <option value="2967">2967</option>
+                        <option value="2580">2580</option>
+                        <option value="2575">2575</option>
+                        <option value="2570">2570</option>
+                        <option value="2573">2573</option>
+                        <option value="2571">2571</option>
+                        <option value="2569">2569</option>
+                        <option value="2512">2512</option>
+                        <option value="2503">2503</option>
+                        <option value="2507">2507</option>
+                        <option value="2500">2500</option>
+                        <option value="2508">2508</option>
+                        <option value="2604">2604</option>
+                        <option value="2600">2600</option>
+                        <option value="2590">2590</option>
+                        <option value="2588">2588</option>
+                        <option value="2688">2688</option>
+                        <option value="2684">2684</option>
+                        <option value="2690">2690</option>
+                        <option value="2680">2680</option>
+                        <option value="2968">2968</option>
+                        <option value="2669">2669</option>
+                        <option value="2651">2651</option>
+                        <option value="2650">2650</option>
+                        <option value="2635">2635</option>
+                        <option value="2619">2619</option>
+                        <option value="2608">2608</option>
+                        <option value="2455">2455</option>
+                    </select>
+                </div>
+
+                <div class="col-xs-6">
+                    <label for="to">What Room Number Do You Wish To Go ?</label>
+                    <select class="form-control" class="col-xs-4" id="to">
+                        <option value="2967">2967</option>
+                        <option value="2580">2580</option>
+                        <option value="2575">2575</option>
+                        <option value="2570">2570</option>
+                        <option value="2573">2573</option>
+                        <option value="2571">2571</option>
+                        <option value="2569">2569</option>
+                        <option value="2512">2512</option>
+                        <option value="2503">2503</option>
+                        <option value="2507">2507</option>
+                        <option value="2500">2500</option>
+                        <option value="2508">2508</option>
+                        <option value="2604">2604</option>
+                        <option value="2600">2600</option>
+                        <option value="2590">2590</option>
+                        <option value="2588">2588</option>
+                        <option value="2688">2688</option>
+                        <option value="2684">2684</option>
+                        <option value="2690">2690</option>
+                        <option value="2680">2680</option>
+                        <option value="2968">2968</option>
+                        <option value="2669">2669</option>
+                        <option value="2651">2651</option>
+                        <option value="2650">2650</option>
+                        <option value="2635">2635</option>
+                        <option value="2619">2619</option>
+                        <option value="2608">2608</option>
+                        <option value="2455">2455</option>
+                    </select>
+                </div>
+
+                <div class="col-xs-12" style="margin-top: 10px;">
+                    <button class="btn btn-success center-block" id="getPath" type="button" onclick="pathFinderModule.getPath();">Get Shortest Path</button>
+                </div>
+
             </div>
 
-            <div class="col-xs-6"> 
-                <label for="to">What Room Number Do You Wish To Go ?</label>
-                <select class="form-control"  class="col-xs-4" id="to">
-                    <option value="2967">2967</option>
-                    <option value="2580">2580</option>
-                    <option value="2575">2575</option>
-                    <option value="2570">2570</option>
-                    <option value="2573">2573</option>
-                    <option value="2571">2571</option>
-                    <option value="2569">2569</option>
-                    <option value="2512">2512</option>
-                    <option value="2503">2503</option>
-                    <option value="2507">2507</option>
-                    <option value="2500">2500</option>
-                    <option value="2508">2508</option>
-                    <option value="2604">2604</option>
-                    <option value="2600">2600</option>
-                    <option value="2590">2590</option>
-                    <option value="2588">2588</option>
-                    <option value="2688">2688</option>
-                    <option value="2684">2684</option>
-                    <option value="2690">2690</option>
-                    <option value="2680">2680</option>
-                    <option value="2968">2968</option>
-                    <option value="2669">2669</option>
-                    <option value="2651">2651</option>
-                    <option value="2650">2650</option>
-                    <option value="2635">2635</option>
-                    <option value="2619">2619</option>
-                    <option value="2608">2608</option>
-                    <option value="2455">2455</option>
-                </select>
-            </div>
-
-            <div class="col-xs-12" style="margin-top: 10px;">
-                <button class="btn btn-success center-block" id="getPath">Get Shortest Path</button>
+            <div class="col-xs-12">
+                <canvas id="myCanvas" width="610" height="323" style="border:1px solid #d3d3d3;">
+                    Your browser does not support the HTML5 canvas tag.
+                </canvas>
             </div>
 
         </div>
-
-        <div class="col-xs-12">
-            <canvas id="myCanvas" width="610" height="323" style="border:1px solid #d3d3d3;">
-            Your browser does not support the HTML5 canvas tag.
-            </canvas>
-        </div>
-
     </div>
-</div>
 </body>
 </html>
 <script src="https://code.jquery.com/jquery-1.12.3.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+
 <script type="text/javascript">
     var points = new Array();
     var startX, startY;
-    function clear() {
+
+    var pathFinderModule = {
+        clearCanvas: function () {
             var canvas = document.getElementById("myCanvas");
             var ctx = canvas.getContext("2d");
             ctx.clearRect(0, 0, 700, 500);
             points = [];
             startX = null;
             startY = null;
-    }
-    $(document).ready(function () {
-        clear();
-        var c = document.getElementById("myCanvas");
-        var ctx = c.getContext("2d");   
-        $("#getPath").on('click', function(){
-            clear();
+        },
+        getPath: function () {
+            this.clearCanvas();
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
             var fromLoc = $("#from").val();
             var toLoc = $("#to").val();
-            if(fromLoc == toLoc)
-            {
+            if (fromLoc == toLoc) {
                 alert("Source and Destination cannot be same");
                 return false;
             }
+
             $.ajax({
                 url: '/getnodes',
                 type: 'GET',
-                data: {from: fromLoc, to: toLoc},
-                beforeSend: function(){
-                    $("#getPath").prop("disabled",true);
+                data: { from: fromLoc, to: toLoc },
+                beforeSend: function () {
+                    $("#getPath").prop("disabled", true);
                 },
-                success: function(data){
-                    clear();
+                success: function (data) {
+                    pathFinderModule.clearCanvas();
                     console.log(data);
                     startX = data.data[0].properties.coord;
                     startY = data.data[0].properties.ycoord;
-                    for(var i = 2; i<(data.data.length-1); i++)
-                    {
+
+                    //Skip the first and last node and only traverse through path nodes
+                    for (var i = 2; i < (data.data.length - 1) ; i++) {
                         var xAxis = data.data[i].properties.x;
                         var yAxis = data.data[i].properties.y;
-                        var index = (i-2);
+                        var index = (i - 2);
                         points[index] = {
-                            "x": xAxis, 
+                            "x": xAxis,
                             "y": yAxis
                         };
                     }
                 },
-                complete: function(){   
-                    $("#getPath").prop("disabled",false); 
+                complete: function () {
+                    $("#getPath").prop("disabled", false);
                     var circle1 = new Path2D();
-                    circle1.moveTo(startX, startY);   
+                    circle1.moveTo(startX, startY);
                     circle1.arc(startX, startY, 5, 0, 2 * Math.PI, true);
                     ctx.fillStyle = "green";
                     ctx.fill(circle1);
-                    ctx.beginPath();  
+                    ctx.beginPath();
                     ctx.lineWidth = "3";
-                    ctx.strokeStyle = "green";  // Green path 
+                    ctx.strokeStyle = "green";  // Green path
                     ctx.moveTo(startX, startY);
-                    for(var i = 0; i<points.length; i++)
-                    {
+                    for (var i = 0; i < points.length; i++) {
                         var point = points[i];
-                        ctx.strokeStyle = "green"; 
-                        ctx.strokeStyle = "green"; 
+                        ctx.strokeStyle = "green";
+                        ctx.strokeStyle = "green";
                         ctx.lineTo(point.x, point.y)
                         ctx.stroke();
-                        if(i == (points.length-1))
-                        {
+                        if (i == (points.length - 1)) {
                             var circle = new Path2D();
                             circle.moveTo(point.x, point.y);
                             circle.arc(point.x, point.y, 6, 0, 2 * Math.PI);
@@ -177,7 +183,11 @@
                         }
                     }
                 }
-            })
-        }) 
+            });
+        }
+    }
+
+    $(function () {
+        pathFinderModule.clearCanvas();
     });
 </script> 
