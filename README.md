@@ -63,3 +63,8 @@ $ node server
 ```sh
 http://localhost:8000
 ```
+##### Author
+Vipul Mehra https://www.linkedin.com/in/vipsm
+
+##### Code-Reviews and Testing By
+Rahul Vohra https://www.linkedin.com/in/rahulvohra01
