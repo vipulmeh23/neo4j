@@ -1,8 +1,7 @@
 # Neo4j
 
 > It uses allShortestPath algorithm to find the shortestPath in between rooms in a particular building. 
-Here we have taken Golisano (RIT Computing and Information Sciences) block on 2nd Floor particulary. And for the sake of brevity 
-taken less rooms into account than there are. We can always extend this though.
+Here we have taken Golisano (RIT Computing and Information Sciences) block on 2nd Floor particulary. And for the sake of brevity taken less rooms into account than there are. We can always extend this though. Here, the nodes are structured into a particular path which can be followed to reach rooms. Each node contains coordinates (their x and y position) and is traversed using Dijkstra's Algorithms as these are connected by some distance. And the total distance is minimized. The nodes may have 1 or more rooms connected to it. The rooms also have x and y coordinates.
 
 ## Installation Instructions
 
@@ -20,7 +19,7 @@ $ npm install --save neo4j
 ```
 
 ##### Just copy and unzip the whole database file and choose and browse database location at start in the splash screen
-- Select the database.
+- Select and browse the database.
 
 #### Installing Node Js
 Depending on your operating system
