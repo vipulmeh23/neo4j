@@ -1,4 +1,4 @@
-# Neo4j
+# Neo4j Pathfinder
 
 > It uses allShortestPath algorithm to find the shortestPath in between rooms in a particular building. 
 Here we have taken Golisano (RIT Computing and Information Sciences) block on 2nd Floor particulary. And for the sake of brevity taken less rooms into account than there are. We can always extend this though. Here, the nodes are structured into a particular path which can be followed to reach rooms. Each node contains coordinates (their x and y position scaled down according to original building floor plan) and is traversed using Dijkstra's Algorithms as these are connected by a distance. The total distance is minimized. The nodes may have 1 or more rooms connected to it. The rooms also have x and y coordinates.
