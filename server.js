@@ -2,7 +2,7 @@ const express     = require('express');
 const bodyParser  = require('body-parser'); 
 const app         = express();
 var neo4j         = require('neo4j');
-var Request = require("request");
+//var Request       = require("request");
 
 var db = new neo4j.GraphDatabase('https://hobby-ojdakgemcbdegbkegjhkkldl.dbs.graphenedb.com:24786');
 //server running on port 8000
