@@ -143,13 +143,13 @@
                 success: function (data) {
                     pathFinderModule.clearCanvas();
                     console.log(data);
-                    startX = data.data[0].properties.coord;
-                    startY = data.data[0].properties.ycoord;
+                    startX = data.results.row[0].coord;
+                    startY = data.results.row[0].ycoord;
 
                     //Skip the first and last node and only traverse through path nodes
                     for (var i = 2; i < (data.data.length - 1) ; i++) {
-                        var xAxis = data.data[i].properties.x;
-                        var yAxis = data.data[i].properties.y;
+                        var xAxis = data.results.row[i].properties.x;
+                        var yAxis = data.results.row[i].properties.y;
                         var index = (i - 2);
                         points[index] = {
                             "x": xAxis,
