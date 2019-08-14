@@ -2,7 +2,7 @@ const express     = require('express');
 const bodyParser  = require('body-parser'); 
 const app         = express();
 var neo4j         = require('neo4j');
-var db = new neo4j.GraphDatabase('https://hobby-ojdakgemcbdegbkegjhkkldl.dbs.graphenedb.com:24780/db/data/');
+var db = new neo4j.GraphDatabase('https://hobby-ojdakgemcbdegbkegjhkkldl.dbs.graphenedb.com:24786');
 //server running on port 8000
 app.listen(8000, function() {
 	console.log("Server running on port 8000");
