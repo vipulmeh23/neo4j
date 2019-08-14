@@ -4,9 +4,8 @@ const app         = express();
 var neo4j         = require('neo4j');
 var db = new neo4j.GraphDatabase('https://hobby-ojdakgemcbdegbkegjhkkldl.dbs.graphenedb.com:24786');
 //server running on port 8000
-app.listen(8000, function() {
-	console.log("Server running on port 8000");
-});
+
+app.listen(process.env.PORT || 5000)
 //to catch request parameters (Get/Post/Put/Delete)
 app.use(bodyParser.urlencoded({extended: true}));
 //to enable the use of directory public
