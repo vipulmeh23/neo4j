@@ -23,11 +23,20 @@ app.get('/getnodes', function(req, res){
 	fromLocation = parseInt(req.query.from);
 	toLocation = parseInt(req.query.to);
 	Request.post({
-    			"headers": { "content-type": "application/json" },
-    			"url": "http://httpbin.org/post",
+    			"headers": { "content-type": "application/json", "Authorization": "Basic bmVvNGo6Yi5FRmgyc3hxbzVlQTkuZHVWOHF2T0ZubE9zUnlmcw=="},
+    			"url": "https://hobby-ojdakgemcbdegbkegjhkkldl.dbs.graphenedb.com:24780/db/data/transaction",
     			"body": JSON.stringify({
-        		"firstname": "Nic",
-        		"lastname": "Raboy"
+				  "statements": [
+				    {
+				      "statement": "MATCH (from: Loc {name: {from}}), (to: Loc {name: {to}}),paths = allShortestPaths((from)-[:CONNECTED_TO*]-(to)) WITH REDUCE(dist = 0, rel in rels(paths) | dist + rel.distance) AS distance, paths RETURN nodes(paths) as data, paths, distance ORDER BY distance LIMIT 1",
+				      "parameters": {"from": fromLocation, "to": toLocation},
+				      "resultDataContents": [
+					"row",
+					"graph"
+				      ],
+				      "includeStats": true
+				    }
+				  ]
     		})
 	}, (error, response, body) => {
 		if(error) {
