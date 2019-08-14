@@ -2,6 +2,8 @@ const express     = require('express');
 const bodyParser  = require('body-parser'); 
 const app         = express();
 var neo4j         = require('neo4j');
+var Request = require("request");
+
 var db = new neo4j.GraphDatabase('https://hobby-ojdakgemcbdegbkegjhkkldl.dbs.graphenedb.com:24786');
 //server running on port 8000
 
@@ -20,15 +22,18 @@ app.get('/', function(req, res){
 app.get('/getnodes', function(req, res){
 	fromLocation = parseInt(req.query.from);
 	toLocation = parseInt(req.query.to);
-	db.cypher({
-		query: 'MATCH (from: Loc {name: {from}}), (to: Loc {name: {to}}),paths = allShortestPaths((from)-[:CONNECTED_TO*]-(to)) WITH REDUCE(dist = 0, rel in rels(paths) | dist + rel.distance) AS distance, paths RETURN nodes(paths) as data, paths, distance ORDER BY distance LIMIT 1',
-		params: {
-			from: fromLocation,
-			to: toLocation,
-		},
-	}, function (err, results) {
-    	if (err) throw err;
-    	var result = results[0];
+	Request.post({
+    			"headers": { "content-type": "application/json" },
+    			"url": "http://httpbin.org/post",
+    			"body": JSON.stringify({
+        		"firstname": "Nic",
+        		"lastname": "Raboy"
+    		})
+	}, (error, response, body) => {
+		if(error) {
+			return console.dir(error);
+		}
+		var result = JSON.parse(body);
 		if (!result) {
 			res.send({error: "Maybe we are not able to find the room ?"})
 		} else {
