@@ -143,8 +143,8 @@
                 success: function (data) {
                     pathFinderModule.clearCanvas();
                     console.log(data);
-                    startX = data.results[""0""].data[""0""].graph.nodes[""0""].properties.coord;
-                    startY = data.results[""0""].data[""0""].graph.nodes[""0""].properties.ycoord;
+                    startX = data.results[0].data[0].graph.nodes[0].properties.coord;
+                    startY = data.results[0].data[0].graph.nodes[0].properties.ycoord;
 
                     //Skip the first and last node and only traverse through path nodes
                     for (var i = 2; i < (data.data.length - 1) ; i++) {
