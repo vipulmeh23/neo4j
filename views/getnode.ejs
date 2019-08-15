@@ -147,7 +147,7 @@
                     startY = data.results[0].data[0].graph.nodes[0].properties.ycoord;
 
                     //Skip the first and last node and only traverse through path nodes
-                    for (var i = 2; i < (results[0].data[0].graph.nodes.length - 1) ; i++) {
+                    for (var i = 2; i < (data.results[0].data[0].graph.nodes.length - 1) ; i++) {
                         var xAxis = data.results[0].data[0].graph.nodes[i].properties.x;
                         var yAxis = data.results[0].data[0].graph.nodes[i].properties.y;
                         var index = (i - 2);
