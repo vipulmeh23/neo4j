@@ -1,12 +1,10 @@
 const express     = require('express');
 const bodyParser  = require('body-parser'); 
 const app         = express();
-var neo4j         = require('neo4j');
-var Request       = require('request');
-
 //accessing NEO4J over REST
-var dbURI         = "https://hobby-ojdakgemcbdegbkegjhkkldl.dbs.graphenedb.com:24780/db/data/transaction"
+const dbURI       = "https://hobby-ojdakgemcbdegbkegjhkkldl.dbs.graphenedb.com:24780/db/data/transaction"
 
+var Request       = require('request');
 //binding to port 5000
 app.listen(process.env.PORT || 5000)
 //to catch request parameters (Get/Post/Put/Delete)
