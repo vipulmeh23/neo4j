@@ -13,15 +13,12 @@ Below is the information regarding installation of the application
 ### Pre-requisites
 - Neo4J Database
 - Node Js along with Node Package Manager
-- Database (Neo4j) (Zip). 
+- Database (Neo4j) (Zip). (not included here - available on request)
 
 #### Installing Neo4J query interface driver 
 - Unzip Neo4J database
 - Start Neo4J instance and browse the unzipped database
-- In the root directory inside the filename server.js on line number 5 put your neo4j username and password in the format and change it according to your conifgurations.
-```sh
-$ var db = new neo4j.GraphDatabase('http://databaseUsername:databasePassword@localhost:YOURPORTNUMBER');
-```
+
 - Goto root directory of the project and run this command
 ```sh
 $ npm install --save neo4j
