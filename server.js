@@ -4,9 +4,10 @@ const app         = express();
 var neo4j         = require('neo4j');
 var Request       = require('request');
 
-var db = new neo4j.GraphDatabase('https://hobby-ojdakgemcbdegbkegjhkkldl.dbs.graphenedb.com:24786');
-//server running on port 8000
+//accessing NEO4J over REST
+var dbURI         = "https://hobby-ojdakgemcbdegbkegjhkkldl.dbs.graphenedb.com:24780/db/data/transaction"
 
+//binding to port 5000
 app.listen(process.env.PORT || 5000)
 //to catch request parameters (Get/Post/Put/Delete)
 app.use(bodyParser.urlencoded({extended: true}));
@@ -22,9 +23,10 @@ app.get('/', function(req, res){
 app.get('/getnodes', function(req, res){
 	fromLocation = parseInt(req.query.from);
 	toLocation = parseInt(req.query.to);
+	//consuming NEO4J REST API through cURL. 
 	Request.post({
     			"headers": { "content-type": "application/json", "Authorization": "Basic bmVvNGo6Yi5FRmgyc3hxbzVlQTkuZHVWOHF2T0ZubE9zUnlmcw=="},
-    			"url": "https://hobby-ojdakgemcbdegbkegjhkkldl.dbs.graphenedb.com:24780/db/data/transaction",
+    			"url": dbURI,
     			"body": JSON.stringify({
 				  "statements": [
 				    {
